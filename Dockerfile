@@ -1,5 +1,4 @@
 FROM adoptopenjdk/openjdk11:alpine-jre
-def artifactPath = "${pwd()}/target/spring-boot-web.jar"
 WORKDIR /app
-COPY ${artifact} app.jar
-ENTRYPOINT ["java","-jar","app.jar"]
+COPY target/spring-boot-demo.jar /app/spring-boot-demo.jar.jar
+ENTRYPOINT ["java","-jar","spring-boot-demo.jar.jar"]
